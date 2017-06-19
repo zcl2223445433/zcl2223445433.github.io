@@ -1,0 +1,7 @@
+1． 下载SDK
+2． 安装SDK
+1． 设置环境变量
+JAVA_HOME：D:\ jdk1.5
+Path：%JAVA_HOME%\bin; %JAVA_HOME%\jre\bin：
+classpath: .;%JAVA_HOME%\lib\dt.jar;
+	   %JAVA_HOME%\lib\tools.jar。（“.”表示当前路径)

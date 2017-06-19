@@ -1,0 +1,93 @@
+#### 一、JavaWEB开发 ####
+   * 入门知识
+	在开发之前需要安装服务器 服务器作用就是：相当于响应客户端的请求返回响应
+	资源
+   
+   * 动态网页和静态网页
+	并不是指网页是否有动画。静态网页是指内容不会变化 动态网页是指内容有程序
+	产生并会时时变化
+
+   * 具体的Web服务器
+     	
+	WebLogic、WebsSphere、Tomcat
+	
+	[Tomcat获取地址]（http://jakarta.apache.org）
+
+   * Tomcat的目录结构
+
+	webapps  放置的是我们所写的应用程序Servlet
+
+	conf放置的是Tomcat的配置文件 可以配置虚拟主机，以及tomcat的端口、管理用户
+	等配置信息
+
+   * JavaWEB项目目录机构
+   ```
+	-webapps
+	  -ROOT
+	    -WEB-INF
+		-classes
+		-lib
+		web.xml
+	    index.jsp
+   ```
+   >注意：WEB-INF 目录在外界是无法访问到的。
+
+#### 二、HTTP协议 ####
+>
+   * 请求
+
+   	请求行 GET /test/text.jsp HTTP1.1
+	请求消息 描述客户端环境信息以及请求的服务器信息
+	请求实体数据
+   
+   * 响应
+	
+	状态行 HTTP/1.1 200 OL
+	响应消息
+	响应实体数据
+
+#### 三、Servlet ####
+应用程序的开发过程
+
+```
+   第一步：实现Servlet接口
+   第二部：要在WEB-INF目录找web.xml文件
+	
+	<servlet>
+	   <servlet-name> index </servlet-class>
+	   <init-param>
+		<param-name> calssdebuginfo </param-name>
+		<param-valuee> true </param-value>
+	   </init-param>
+	   <load-on-startup> 1 </load-on-startup>
+	</servlet>
+	<servlet-mapping>
+	   <servlet-name> index </servlet-name>
+	   <url-pattern> /gaoxin </url-pattern>
+	   <url-pattren> /songjun </url-pattren>
+	</servlet-mapping> 
+   
+   第三部：部署项目，相当于放到了webapps目录下面
+
+```
+   * Servlet生命周期
+```
+	直接集成Servlet 会产生
+	init 在第一次被访问的时候调用
+	service 在每一次被访问的时候调用
+	destory 在关闭服务其的时候调用
+	
+```
+   我们所写的应用程序要集成HTTPServlet，覆写doGet  doPost
+```	
+	继承关系
+	Servlet>GenericServlet>HttpServlet>我们自己写的类
+
+```  
+
+
+
+
+
+
+
